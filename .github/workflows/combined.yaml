@@ -5,6 +5,7 @@ on:
       - 'hotfix/**'
       - 'feature/**'
       - 'release/**'
+      - 'patch-**'
   pull_request:
     branches: 
       - master
@@ -31,7 +32,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CATEGORY: integration
-      - uses: KTibow/ha-blueprint@stable
+      - uses: KTibow/ha-blueprint@main
         name: CI
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
